@@ -1,6 +1,6 @@
-const CACHE_NAME = 'finrise-admin-pwa-v1';
+const CACHE_NAME = 'finrise-admin-pwa-v2';
 const APP_SHELL = [
-  './admin.html',
+  './index.html',
   './manifest.webmanifest',
   './offline.html',
   './finrise-logo.png',
@@ -41,11 +41,11 @@ self.addEventListener('fetch', event => {
       fetch(request).then(response => {
         if (response && response.ok) {
           const copy = response.clone();
-          caches.open(CACHE_NAME).then(cache => cache.put('./admin.html', copy));
+          caches.open(CACHE_NAME).then(cache => cache.put('./index.html', copy));
         }
         return response;
       }).catch(async () => {
-        return (await caches.match('./admin.html')) ||
+        return (await caches.match('./index.html')) ||
                (await caches.match('./offline.html'));
       })
     );

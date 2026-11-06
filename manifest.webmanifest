@@ -1,9 +1,9 @@
 {
-  "id": "./admin.html",
+  "id": "./",
   "name": "FINRISE ASSETS Admin",
   "short_name": "FINRISE Admin",
   "description": "FINRISE ASSETS administration portal",
-  "start_url": "./admin.html",
+  "start_url": "./",
   "scope": "./",
   "display": "standalone",
   "orientation": "any",
